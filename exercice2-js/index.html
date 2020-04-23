@@ -13,13 +13,18 @@
         majeur, sinon lui afficher Vous êtes mineur.</p>
 
     <script>
-        let number = prompt ("entrer un nombre");
-        if (number > 18) {
+        let number = +(prompt("entrer un nombre"));
+
+        if (isNaN(number) || number < 0 ) {
+            alert("entrer un chiffre");
+        }
+        else if (number >= 18) {
             alert("vous êtes majeur");
-            }
-            if (number < 18) {
+        } 
+        else  {
             alert("vous êtes mineur");
-            }
+        }
+
     </script>
 
 </body>

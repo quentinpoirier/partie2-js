@@ -13,27 +13,30 @@
     <ul>
         <li>Si elle est entre 0 et 3 afficher Nul</li>
         <li>Si elle est entre 4 et 6 afficher Moyen</li>
-        <li>Si elle est entre 8 et 9 afficher Bien</li>
+        <li>Si elle est entre 7 et 9 afficher Bien</li>
         <li>Si elle est égale à 10 afficher Excellent</li>
     </ul>
 
     <script>
-        let number = prompt("note :");
+        let number = +(prompt("note :")); 
 
-        if ((number >= 0 && number < 3)); {
+        if (isNaN(number) || number < 0){
+            alert ("entrer un chiffre");
+        }
+        else if (number >= 0 && number < 3) {
             alert("Nul");
-        }
-         elseif ((number >= 4 && number <= 6)); {
+        }        
+        else if (number >= 4 && number <= 6) {
             alert("Moyen");
-        }
-         elseif ((number >= 8 && number <= 9)); {
+        } 
+        else if (number >= 7 && number <= 9) {
             alert("Bien");
-        }
-         elseif ((number == 10)); {
+        } 
+        else if (number == 10) {
             alert("Excellent");
         }
-        // penser au endif
-        // if imbriqué
+        
+    
     </script>
 
 </body>
